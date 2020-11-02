@@ -1,0 +1,12 @@
+cyan='\e[1;36m%s\e[0m\n'
+printf "$cyan"
+ printf "$cyan" " .-----------------------------.           "
+ printf "$cyan" " |  Hi Hackers                 |           "
+ printf "$cyan" " |  Tool   : h0st1l3-hunt3r    |           "
+ printf "$cyan" " |  Author : @karthi_the_hacker|           "
+ printf "$cyan" " |           Jai Hind          |           "
+ printf "$cyan" " '-----------------------------'           "
+ printf "$cyan" "                 ^      (\_/)    "
+ printf "$cyan" "                 '----- (O.o)    "
+ printf "$cyan" "                        (> <)    "
+printf "$cyan" ""
