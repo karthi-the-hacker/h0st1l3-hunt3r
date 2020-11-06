@@ -12,7 +12,7 @@ if  [ $arg = "all" ]&> /dev/null ;
    printf "$green" "Warning it take more time its depend upon your subdomains list"
    echo " "
       read -p "Enter the full path with file name: " fl
-      read -p "Enter comany name: " comp
+      read -p "Enter company name: " comp
       read -p "Enter ngrok or burp colab url: " ul
       mkdir ~/recon/$comp/ &> /dev/null
       mkdir ~/recon/$comp/h0st1l3Hunt3r &> /dev/null
@@ -36,7 +36,7 @@ else
      printf "$green" "its just scan only for single domain or subdomain"
      echo " "
       read -p "Enter Domain name: " dl
-      read -p "Enter comany name: " comp
+      read -p "Enter company name: " comp
       read -p "Enter ngrok or burp colab url: " url
       mkdir ~/recon/$comp/ &> /dev/null
       mkdir ~/recon/$comp/h0st1l3Hunt3r &> /dev/null
