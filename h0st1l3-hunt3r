@@ -12,7 +12,7 @@ if  [ $arg = "all" ]&> /dev/null ;
    printf "$green" "Warning it take more time its depend upon your subdomains list"
    echo " "
       read -p "Enter the full path with file name: " fl
-      read -p "Enter company name: " comp
+      read -p "Enter comany name: " comp
       read -p "Enter ngrok or burp colab url: " ul
       mkdir ~/recon/$comp/ &> /dev/null
       mkdir ~/recon/$comp/h0st1l3Hunt3r &> /dev/null
@@ -32,11 +32,13 @@ if  [ $arg = "all" ]&> /dev/null ;
                  done < data.txt 
             done < ~/recon/$comp/h0st1l3Hunt3r/carwl.txt
       done < $fl
-else
+fi
+if   [ $arg = "single" ]&> /dev/null ;
+  then
      printf "$green" "its just scan only for single domain or subdomain"
      echo " "
       read -p "Enter Domain name: " dl
-      read -p "Enter company name: " comp
+      read -p "Enter comany name: " comp
       read -p "Enter ngrok or burp colab url: " url
       mkdir ~/recon/$comp/ &> /dev/null
       mkdir ~/recon/$comp/h0st1l3Hunt3r &> /dev/null
@@ -53,4 +55,25 @@ else
                       echo "^^^^^^^^^^^^^^^^^^^^^^post $urli ^^^^^^^^^^^^^^^^^^^^^^" | tee -a ~/recon/$comp/h0st1l3Hunt3r/out/$da.txt
                  done < data.txt 
             done < ~/recon/$comp/h0st1l3Hunt3r/carwl.txt
+fi
+if  [ $arg = "craw" ]&> /dev/null ;
+  then
+     printf "$green" "Scanning for craw out "
+     echo " "
+      read -p "Enter comany name: " comp
+      read -p "Enter ngrok or burp colab url: " url
+      mkdir ~/recon/$comp/ &> /dev/null
+      mkdir ~/recon/$comp/h0st1l3Hunt3r &> /dev/null
+      mkdir ~/recon/$comp/h0st1l3Hunt3r/out &> /dev/null
+            while read urli ;
+                do
+                 while read data ;
+                    do
+                      da=$(echo $urli | cut -d"/" -f3)
+                      curl -I -X GET $urli -H "$data $url" | tee -a ~/recon/$comp/h0st1l3Hunt3r/out/$da.txt
+                      echo "^^^^^^^^^^^^^^^^^^^^^^ $urli ^^^^^^^^^^^^^^^^^^^^^^" | tee -a ~/recon/$comp/h0st1l3Hunt3r/out/$da.txt
+                      curl -I -X POST $urli -H "$data $url" | tee -a ~/recon/$comp/h0st1l3Hunt3r/out/$da.txt
+                      echo "^^^^^^^^^^^^^^^^^^^^^^post $urli ^^^^^^^^^^^^^^^^^^^^^^" | tee -a ~/recon/$comp/h0st1l3Hunt3r/out/$da.txt
+                 done < data.txt 
+            done < $2
 fi
