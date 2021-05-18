@@ -7,7 +7,10 @@ custom headers
 
 # I promise You guys it will give you 100% perfet output if the target is vulnerable
 
+# To know more about HTTP header attack enroll course from cappriciosec University
 
+Sample video link :- https://www.youtube.com/watch?v=tlzzyKDF4b8&list=PL0xaAWCn3a1bG4nwJAxoDOwIc0dtzK8jm
+Course Link https://www.instagram.com/tv/CKgPBzYg_T3/?utm_source=ig_web_copy_link
 
 ![alt text](https://raw.githubusercontent.com/karthi-the-hacker/h0st1l3-hunt3r/main/logo.gif)
 
