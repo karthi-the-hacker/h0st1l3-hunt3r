@@ -31,7 +31,8 @@ Steps to install :
 7. ./h0st1l3-hunt3r 
 
 
-
+# Syntax for help :
+      ./h0st1l3-hunt3r help
 # Syntax for all data :
       ./h0st1l3-hunt3r all
 # For single domain or subdomain 
