@@ -43,7 +43,7 @@ Steps to install :
       ./h0st1l3-hunt3r single
        
 # For loading crawl data
-      ./h0st1l3-hunt3r craw
+      ./h0st1l3-hunt3r craw <full path with file name>
       
 # Happy hacking 💀
 # Jai Hind 🇮🇳
