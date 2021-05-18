@@ -6,6 +6,15 @@ printf "$cyan"
 arg=$1
 printf "$green" "Hack all the HTTP headers"
 echo ""
+
+if  [ $arg = "help" ]&> /dev/null ;
+  then
+    printf "$green" "./h0st1l3-hunt3r all"
+    echo "It is used for all automated crawling and automated injection"
+    printf "$green" "./h0st1l3-hunt3r single"
+    echo "It is used for single domain or single subdomain automated crawling and automated injection"
+    printf "$green" "./h0st1l3-hunt3r craw"
+    echo "It is used for already crawled data to do automated injection"
 if  [ $arg = "all" ]&> /dev/null ;
   then
    
