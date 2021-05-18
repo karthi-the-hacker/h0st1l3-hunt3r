@@ -3,7 +3,7 @@ HTTP Header attack automation
 
 
 
-![alt text](https://www.canva.com/design/DAEMFjf8bMo/view?utm_content=DAEMFjf8bMo&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
+![alt text](https://raw.githubusercontent.com/karthi-the-hacker/h0st1l3-hunt3r/main/logo.gif)
 
 Steps to install :
 im Happy to say this you dont need to install any third party service to run my tool 😃
