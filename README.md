@@ -32,7 +32,7 @@ Steps to install :
 4. cd v1l03t
 5. chmod +x *
 6. chmod +x .banner
-7. ./h0st1l3-hunt3r 
+7. ./h0st1l3-hunt3r
 
 
 # Syntax for help :
