@@ -29,7 +29,7 @@ Steps to install :
 1. mkdir ~/tools &>/dev/null
 2. cd ~/tools/
 3. git clone https://github.com/karthi-the-hacker/h0st1l3-hunt3r.git
-4. cd v1l03t
+4. cd h0st1l3-hunt3r
 5. chmod +x *
 6. chmod +x .banner
 7. ./h0st1l3-hunt3r
