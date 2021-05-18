@@ -15,6 +15,7 @@ if  [ $arg = "help" ]&> /dev/null ;
     echo "It is used for single domain or single subdomain automated crawling and automated injection"
     printf "$green" "./h0st1l3-hunt3r craw"
     echo "It is used for already crawled data to do automated injection"
+ fi
 if  [ $arg = "all" ]&> /dev/null ;
   then
    
